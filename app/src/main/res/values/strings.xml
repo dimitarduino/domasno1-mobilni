@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Domasno1</string>
-    <string name="tagged_searches">Tagged Searches</string>
-    <string name="edit">Edit</string>
+    <string name="app_name">Domasno2</string>
+    <string name="tagged_searches">Резултати</string>
+    <string name="edit">Измени</string>
+    <string name="zborMakedonskiEditHint">Збор (македонски)</string>
+    <string name="zborAngliskiEditHint">Збор (англиски)</string>
+    <string name="dodajNovZborBtn">Додај нов збор</string>
 </resources>

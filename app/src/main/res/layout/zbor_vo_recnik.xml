@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/contact1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/mkZbor"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="100"
+            android:background="@color/btn_primary"
+            android:backgroundTint="@color/btn_primary"
+            android:paddingTop="11dp"
+            android:text="Dimitar Kuzmanovski"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+
+        <Button
+            android:id="@+id/btn_izmeniZbor"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:paddingHorizontal="5dp"
+            android:backgroundTint="@color/btn_primary"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/edit"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
