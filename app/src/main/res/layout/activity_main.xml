@@ -14,40 +14,49 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_height="58dp"
-        android:text="Enter Twitter search query here..." />
+        android:hint="Пребарувај..." />
 
 
     <LinearLayout
         android:id="@+id/searchLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@id/inputSearch"
         android:weightSum="100"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         >
     <EditText
-        android:id="@+id/tagQuery"
+        android:id="@+id/makedonskiZbor"
         android:layout_width="wrap_content"
         android:layout_height="58dp"
-        android:layout_weight="70"
-        android:text="Enter Twitter tag query here..."
+        android:layout_weight="50"
+        android:hint="@string/zborMakedonskiEditHint"
     
         />
+
+        <EditText
+            android:id="@+id/angliskiZbor"
+            android:layout_height="58dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="50"
+            android:hint="@string/zborAngliskiEditHint"
+
+            />
+    </LinearLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_dodajZbor"
+        android:layout_below="@id/searchLinear"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
         android:layout_height="50dp"
-        android:layout_weight="30"
-        android:text="Save"
+        android:text="@string/dodajNovZborBtn"
         android:textColor="@color/black"
 
         android:backgroundTint="@color/btn_primary" />
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/scrollTitle"
-        android:layout_below="@id/searchLinear"
+        android:layout_below="@id/btn_dodajZbor"
         android:background="@color/scrollview_bg"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
@@ -76,592 +85,11 @@
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/scrollview_bg">
 
-
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recnikRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content" />
 
-
-
-
-            <LinearLayout
-                android:id="@+id/contact1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact1Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Dimitar Kuzmanovski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact1Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/contact2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact2Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Dimitar Dimitrovski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact2Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/contact3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact2"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact3Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Ana Bozinovska"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact3Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact3"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact4Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Stefan Hristovski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact4Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/contact5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact4"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact5Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Stefanija Hristovska"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact5Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact5"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact6Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Aleksandra Trajkovska"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact6Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/contact7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact6"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact7Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Hristijan Pavleski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact7Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact7"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact8Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Marija Najdovska"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact8Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact8"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact9Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Petar Petrovski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact9Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact9"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact10Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Bojan Mladenovski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact10Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact10"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact11Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Angela Petrevska"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact11Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact11"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact12Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Sofija Trajkova"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact12Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/contact13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/contact12"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:id="@+id/contact13Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="100"
-                    android:background="@color/btn_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:paddingTop="11dp"
-                    android:text="Filip Ilievski"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/contact13Button"
-                    android:layout_width="120dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:backgroundTint="@color/btn_primary"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/edit"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
 
     </ScrollView>
 
@@ -677,13 +105,13 @@
         >
 
         <Button
-            android:id="@+id/clearTags"
+            android:id="@+id/izbrisiFiltri"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/btn_primary"
             android:textColor="@color/black"
             android:layout_weight="100"
-            android:text="Clear Tags" />
+            android:text="Отстрани филтри" />
     </LinearLayout>
 </RelativeLayout>
